@@ -14,11 +14,14 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // mongoDB connect
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { 
+    useNewUrlParser: true 
+    , useFindAndModify: false
+});
 
 // routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.use(require("./routes/apiRoutes"));
+app.use(require("./routes/htmlRoutes"));
 
 // server start
 app.listen(PORT, () => {
