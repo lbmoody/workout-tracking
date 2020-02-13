@@ -1,5 +1,5 @@
 # workout-tracking
-workout tracking app with node/express server and mongodb
+workout tracking app with node/express server and mongodb. See deployed application [here](https://powerful-crag-31773.herokuapp.com)
 
 ## installation
 This app has 3 npm dependancies [express](https://www.npmjs.com/package/express) for node js, [mongoose](https://www.npmjs.com/package/mongoose) to set up the mongoDB model, and [morgan](https://www.npmjs.com/package/morgan) for server-side logging. Please run an `npm i` to install dependancies.
